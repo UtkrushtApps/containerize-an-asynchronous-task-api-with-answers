@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  async-api:
+    build: .
+    container_name: async-api
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - JAVA_OPTS=-Xms256m -Xmx512m
+    volumes:
+      - ./logs:/app/logs # Persist logs to local directory
+    deploy:
+      resources:
+        limits:
+          memory: 600M
+        reservations:
+          memory: 256M
