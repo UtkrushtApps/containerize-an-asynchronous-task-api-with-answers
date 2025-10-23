@@ -1,0 +1,14 @@
+# Ignore Maven/Gradle build directories and other unnecessary files
+/target/
+/.idea/
+*.iml
+*.class
+*.jar
+node_modules/
+dist/
+logs/
+*.log
+.DS_Store
+.git/
+.gitignore
+README.md
